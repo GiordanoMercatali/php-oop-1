@@ -5,10 +5,12 @@ $avengers_endgame = new Movie ('Avengers Endgame', ['Superhero', 'Action'], '201
 // var_dump($avengers_endgame);
 // echo $avengers_endgame->avg_review($avengers_endgame->reviews);
 $avatar = new Movie ('Avatar', ['Sci-fi', 'Action'], '2010', [5, 4, 4, 5, 5]);
+$natale_in_india = new Movie ('Natale in India', ['Comedy'], '2003', [1, 2, 3, 2, 1]);
 
 $movies = [
     $avengers_endgame,
     $avatar,
+    $natale_in_india,
 ]
 ?>
 

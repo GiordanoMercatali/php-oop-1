@@ -18,8 +18,15 @@ class Movie{
 
     public function displayGenresString(){
         $string = "";
-        foreach($this->genres as $genre){
-            $string .= $genre . ' ';
+        // foreach($this->genres as $genre){
+        //     $string .= $genre . ' ';
+        //     echo count($this->genres);
+        // }
+        for($i = 0; $i < count($this->genres); $i++){
+            if($i === count($this->genres) - 1)
+                $string .= $this->genres[$i] . ' ';
+            else
+                $string .= $this->genres[$i] . ', ';
         }
         return $string;
     }
