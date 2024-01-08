@@ -1,10 +1,10 @@
 <?php
 require_once __DIR__ . "/Models/Movie.php";
 
-$avengers_endgame = new Movie ('Avengers Endgame', 'Superhero', '2019', [5, 3, 4, 4, 5]);
+$avengers_endgame = new Movie ('Avengers Endgame', ['Superhero', 'Action'], '2019', [5, 3, 4, 4, 5]);
 // var_dump($avengers_endgame);
 // echo $avengers_endgame->avg_review($avengers_endgame->reviews);
-$avatar = new Movie ('Avatar', 'Sci-fi', '2010', [5, 4, 4, 5, 5]);
+$avatar = new Movie ('Avatar', ['Sci-fi', 'Action'], '2010', [5, 4, 4, 5, 5]);
 
 $movies = [
     $avengers_endgame,
@@ -24,7 +24,7 @@ $movies = [
         <ul>
             <?php foreach($movies as $movie){ ?>
                 <li>
-                    <?php echo $movie->name . ' is a ' . $movie->genre . ' movie released in ' . $movie->year . '. It has a rating of ' . $movie->avg_review($movie->reviews) . ' stars. ' ?>
+                    <?php echo $movie->name . ' is a ' . $movie->displayGenresString() . ' movie released in ' . $movie->year . '. It has a rating of ' . $movie->avg_review($movie->reviews) . ' stars. ' ?>
                 </li>
                 <?php } ?>
         </ul>
